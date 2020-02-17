@@ -1,16 +1,16 @@
 
 
-var myNodelist = document.getElementsByTagName("LI");
+var listItem = document.getElementsByTagName("LI");
 var i;
-for (i = 0; i < myNodelist.length; i++) {
+for (i = 0; i < listItem.length; i++) {
 	var span = document.createElement("SPAN");
 	var txt = document.createTextNode("\u00D7");
 	span.className = "close";
 	span.appendChild(txt);
-	myNodelist[i].appendChild(span);
+	listItem[i].appendChild(span);
 }
 
-// Close button to close item in the todo list
+
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -20,7 +20,7 @@ for (i = 0; i < close.length; i++) {
 	}
 }
 
-// Striking a line against an item which is completed
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
 	if (ev.target.tagName === 'LI') {
@@ -29,7 +29,6 @@ list.addEventListener('click', function (ev) {
 }, false);
 
 
-// Adding a new item in ToDo list
 function newElement() {
 	var li = document.createElement("li");
 	var inputValue = document.getElementById("myInput").value;
